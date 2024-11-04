@@ -1,0 +1,12 @@
+Epoch	Train	Validation
+epoch: 1, step: 6, time: 6.0, train: 32.289, valid: 26.840, train_acc: 0.076, valid_acc: 0.085
+epoch: 2, step: 12, time: 0.5, train: 29.044, valid: 22.932, train_acc: 0.074, valid_acc: 0.090
+epoch: 3, step: 18, time: 0.5, train: 25.035, valid: 21.001, train_acc: 0.072, valid_acc: 0.085
+epoch: 4, step: 24, time: 0.5, train: 23.211, valid: 20.733, train_acc: 0.070, valid_acc: 0.104
+epoch: 5, step: 29, time: 2.9, train: 21.806, valid: 19.823, train_acc: 0.081, valid_acc: 0.104
+epoch: 6, step: 34, time: 1.1, train: 21.387, valid: 18.943, train_acc: 0.082, valid_acc: 0.104
+epoch: 7, step: 39, time: 1.2, train: 20.193, valid: 18.361, train_acc: 0.083, valid_acc: 0.110
+epoch: 8, step: 44, time: 2.3, train: 19.567, valid: 18.041, train_acc: 0.090, valid_acc: 0.108
+epoch: 9, step: 50, time: 5.1, train: 19.562, valid: 18.079, train_acc: 0.089, valid_acc: 0.113
+epoch: 10, step: 56, time: 2.0, train: 19.025, valid: 17.832, train_acc: 0.099, valid_acc: 0.132
+epoch: 11, step: 62, time: 2.9, train: 18.493, valid: 17.771, train_acc: 0.104, valid_acc: 0.131

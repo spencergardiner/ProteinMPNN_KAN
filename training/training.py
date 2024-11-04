@@ -82,6 +82,19 @@ def main(args):
                         dropout=args.dropout, 
                         augment_eps=args.backbone_noise)
     model.to(device)
+    
+    # if args.pretrain_weights is not None:
+    #     print('Loading pre-trained weights')
+    #     model.load_state_dict(torch.load(args.pretrain_weights, map_location=device), strict=False)
+        
+    #     # for name, param in model.named_parameters():
+    #     #     if not 'W' in name:
+    #     #         param.requires_grad = False
+    #     #         print("Freezing layer: ", name)
+    #     #     else:
+    #     #         param.requires_grad = True
+    #     #         print("Unfreezing layer: ", name)
+    #     # print('\n\n')
 
 
     if PATH:
@@ -89,6 +102,9 @@ def main(args):
         total_step = checkpoint['step'] #write total_step from the checkpoint
         epoch = checkpoint['epoch'] #write epoch from the checkpoint
         model.load_state_dict(checkpoint['model_state_dict'])
+        
+        
+        
     else:
         total_step = 0
         epoch = 0
@@ -246,6 +262,8 @@ if __name__ == "__main__":
     argparser.add_argument("--debug", type=bool, default=False, help="minimal data loading for debugging")
     argparser.add_argument("--gradient_norm", type=float, default=-1.0, help="clip gradient norm, set to negative to omit clipping")
     argparser.add_argument("--mixed_precision", type=bool, default=True, help="train with mixed precision")
+    argparser.add_argument("--pretrain_weights", type=str, default=None, help="path for pre-trained weights")
+
  
     args = argparser.parse_args()    
     main(args)   
